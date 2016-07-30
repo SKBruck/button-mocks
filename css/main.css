@@ -32,22 +32,28 @@
 .btn1:hover {
   background: linear-gradient(rgba(24,69,59,.45), rgba(24,69,59,1));
   box-shadow: 3px 3px 2px #cccccc;
-  margin-top: 1px;
-  margin-left: 1px;
+  /*margin-top: 1px;
+  margin-left: 1px;*/
 }
 
 /* Button 2 Styles */
 
 .btn2 {
   margin-bottom: 10px;
-}
-
-.btn2:after{
-
+  height: 90px;
+  width: 90px;
+  border: 5px outset rgba(24, 69, 59, 0.75);
+  box-shadow: 2px 2px 1px 2px #cccccc;
+  background: #18453b;
+  background: linear-gradient(135deg, rgba(24,69,59,.75), rgba(24,69,59,1));
+  color: #fff;
+  cursor: pointer;
 }
 
 .btn2:hover {
-
+  border: 5px inset rgba(24, 69, 59, 0.75);
+  box-shadow: 1px 1px 1px 2px #cccccc;
+  background: linear-gradient(135deg, rgba(24,69,59,1), rgba(24,69,59,.75));
 }
 
 /* Button 3 Styles */
@@ -65,7 +71,7 @@
   border-radius: 5px;
   box-shadow: 5px 5px 2px #cccccc;
   margin: 0 10px 10px 0;
-  padding: 5px;
+  padding: 7px;
   background: #18453b;
   background: linear-gradient(rgba(24,69,59,.6), rgba(24,69,59,1));
   cursor: pointer;
@@ -97,6 +103,19 @@
 
 .btn5 {
   margin-bottom: 10px;
+  padding: 2px;
+  border: 5px outset rgba(24, 69, 59, 0.75);
+  box-shadow: 2px 2px 1px 2px #cccccc;
+  background: #18453b;
+  background: linear-gradient(170deg, rgba(24,69,59,.75), rgba(24,69,59,1));
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn5:hover {
+  border: 5px inset rgba(24, 69, 59, 0.75);
+  box-shadow: 1px 1px 1px 2px #cccccc;
+  background: linear-gradient(170deg, rgba(24,69,59,1), rgba(24,69,59,.75));
 }
 
 /* Button 6 Styles */
