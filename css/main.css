@@ -10,7 +10,7 @@
   box-shadow: 5px 5px 2px #cccccc;
   margin: 0 10px 10px 0;
   background: #18453b;
-  background: linear-gradient(rgba(24,69,59,.6), rgba(24,69,59,1));
+  background: linear-gradient(rgba(24,69,59,.75) 25%, rgba(24,69,59,1));
   cursor: pointer;
   text-decoration: none;
   color: #fff;
@@ -19,21 +19,19 @@
 .btn1:after{
   content: '';
   position: absolute;
-  top: 0;
+  top: 1;
   left: 0;
   z-index: -1;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border: 10px;
+  border-radius: 10px;
   height: 50%;
   width: 100%;
-  background: linear-gradient(rgba(24,69,59,1), rgba(24,69,59,0));
+  background: linear-gradient(rgba(24,69,59,1) 75%, rgba(24,69,59,.1));
 }
 
 .btn1:hover {
-  background: linear-gradient(rgba(24,69,59,.45), rgba(24,69,59,1));
+  background: linear-gradient(rgba(24,69,59,.75), rgba(24,69,59,1));
   box-shadow: 3px 3px 2px #cccccc;
-  /*margin-top: 1px;
-  margin-left: 1px;*/
 }
 
 /* Button 2 Styles */
@@ -73,7 +71,7 @@
   margin: 0 10px 10px 0;
   padding: 7px;
   background: #18453b;
-  background: linear-gradient(rgba(24,69,59,.6), rgba(24,69,59,1));
+  background: linear-gradient(rgba(24,69,59,.75) 25%, rgba(24,69,59,1));
   cursor: pointer;
   text-decoration: none;
   color: #fff;
@@ -82,20 +80,18 @@
 .btn4:after{
   content: '';
   position: absolute;
-  top: 0;
+  top: 1;
   left: 0;
   z-index: -1;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 50%;
   width: 100%;
-  background: linear-gradient(rgba(24,69,59,1), rgba(24,69,59,0));
+  background: linear-gradient(rgba(24,69,59,1) 75%, rgba(24,69,59,.1));
 }
 
 .btn4:hover {
-  background: linear-gradient(rgba(24,69,59,.45), rgba(24,69,59,1));
-  margin-top: 1px;
-  margin-left: 1px;
+  background: linear-gradient(rgba(24,69,59,.75), rgba(24,69,59,1));
   box-shadow: 3px 3px 2px #cccccc;
 }
 
