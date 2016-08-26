@@ -1,0 +1,74 @@
+<?php
+
+function shortcode_msu_shortcode_info() {
+  $shortcodes['button'] = array(
+    'title' => t('Button'),
+    'description' => t('Insert a link formatted as a button.'),
+    'process callback' => 'shortcode_msu_shortcode_button',
+    'attributes callback' => 'shortcode_msu_button_attributes',
+    'tips callback' => 'shortcode_msu_shortcode_button_tip',
+  );
+
+  return $shortcodes;
+}
+
+function shortcode_msu_theme() {
+  return array(
+    'shortcode_button' => array(
+      'variables' => array('path' => '#', 'text' => ''),
+    ),
+  );
+}
+
+function shortcode_msu_button_attributes($form, &$form_state) {
+  $form['button-title'] = array(
+    '#title' => t('Title'),
+    '#type' => 'textfield',
+    '#states' => array(
+      'visible' => array(
+        ':input[name="shortcode"]' => array('value' => 'button'),
+      ),
+    ),
+  );
+  $form['button-path'] = array(
+    '#title' => t('Path'),
+    '#type' => 'textfield',
+    '#states' => array(
+      'visible' => array(
+        ':input[name="shortcode"]' => array('value' => 'button'),
+      ),
+    ),
+  );
+
+  return $form;
+}
+
+function shortcode_msu_shortcode_button($attrs, $text) {
+  $attrs = shortcode_attrs(array(
+    'path' => '<front>',
+  ), $attrs);
+
+  $path = url($attrs['path']);
+
+  return theme('shortcode_button', array(
+    'path' => $path,
+    'text' => $text,
+  ));
+}
+
+function shortcode_msu_shortcode_button_tip($format, $long) {
+  $output = array();
+  $output[] = '<p><strong>' . t('[button path="path"]text[/button]') . '</strong> ';
+  if ($long) {
+    $output[] = t('Inserts a link formatted as an MSU themed button. Use the url parameter for the link.') . '</p>';
+  } else {
+    $output[] = t('Inserts a link formatted as an MSU themed button. The <em>path</em> parameter provides the link target (the default is the front page).
+    The <em>title</em> will be formatted as a link title (small tooltip over the link - helps for SEO).') . '</p>';
+  }
+
+  return implode(' ', $output);
+}
+
+function theme_shortcode_button($vars) {
+  return '<a href="' . $vars['path'] . '"><button class="msu-button" type="button">' . $vars['text'] . '</button></a>';
+}

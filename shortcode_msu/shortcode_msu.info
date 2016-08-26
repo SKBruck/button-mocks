@@ -1,0 +1,6 @@
+name = Shortcode MSU
+description = Provides a custom MSU themed button shortcode
+package = Shortcode
+core = 7.x
+dependencies[] = shortcode
+stylesheets[all][] = shortcode_msu.css
